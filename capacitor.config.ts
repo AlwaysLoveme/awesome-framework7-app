@@ -39,7 +39,7 @@ const config: CapacitorConfig = {
       androidScaleType: "CENTER_CROP",
     },
   },
-  loggingBehavior: "production",
+  loggingBehavior: "debug",
   // server: {
   //   cleartext: true,
   //   url: `http://192.168.1.99:8080`,

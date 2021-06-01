@@ -69,6 +69,9 @@ export default defineComponent({
     };
 
     const f7Ready = () => {
+      f7.views.main.router.navigate("/tabs/", {
+        clearPreviousHistory: true,
+      });
       // Init capacitor APIs (see f7config/capacitor.js)
       if (device.capacitor) {
         capacitorApp.init(f7);

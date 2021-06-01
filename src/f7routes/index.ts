@@ -7,7 +7,7 @@ import { cancelTokenSources } from "@/shared/axios";
 
 const baseRoutes: Routes[] = [
   {
-    path: "/",
+    path: "/tabs/",
     asyncComponent: () => import("@/pages/tabs/index.vue"),
     tabs,
   },

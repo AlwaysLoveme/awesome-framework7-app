@@ -4,7 +4,7 @@ const DotEnv = require("dotenv-webpack");
 const node_env = process.env.NODE_ENV;
 
 module.exports = {
-  publicPath: "./",
+  publicPath: "/",
   lintOnSave: true,
   productionSourceMap: false,
   configureWebpack: {

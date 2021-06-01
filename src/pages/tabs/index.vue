@@ -36,11 +36,9 @@ export default defineComponent({
   },
   setup() {
     const swiperParams = reactive({
-      nested: true,
-      speed: 400,
-      shortSwipes: true,
-      effect: window.localStorage.tabEffect || "slide",
+      effect: window.localStorage.tabEffect ?? "slide",
     });
+    console.log(swiperParams);
 
     return {
       tabs,
