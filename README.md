@@ -1,4 +1,4 @@
-# awesomeFramework7App
+# AwesomeFramework7App
 This is a Sample Template App build using Capacitor3.0 and Vue(v3.0.11) with Framework7(v6.0.17) in Typescript，I hope this project can help people who are new to Framework7 and plan to use it to develop hybrid apps.
 
 This sample APP integrates most of the official components, It also integrates some commonly used native functions, such as Camera、Qrscanner、Statusbar and so on.
