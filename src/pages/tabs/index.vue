@@ -36,6 +36,8 @@ export default defineComponent({
   },
   setup() {
     const swiperParams = reactive({
+      speed: 400,
+      shortSwipes: true,
       effect: window.localStorage.tabEffect ?? "slide",
     });
     console.log(swiperParams);

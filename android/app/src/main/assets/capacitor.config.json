@@ -15,5 +15,5 @@
 			"androidScaleType": "CENTER_CROP"
 		}
 	},
-	"loggingBehavior": "production"
+	"loggingBehavior": "debug"
 }
