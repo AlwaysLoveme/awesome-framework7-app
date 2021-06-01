@@ -5,6 +5,31 @@ This sample APP integrates most of the official components, It also integrates s
 
 It will continue to be updated later
 
+## Preview
+<table border frame=void collapse="collapse">
+  <tr>
+    <td align="center">
+    <img src="./preview/home.png" width="375" />
+    <div>Home</div>
+    </td>
+    <td align="center">
+    <img src="./preview/tools.png" width="375" />
+    <div>Tools</div>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+    <img src="./preview/native.png" width="375" />
+    <div>Native</div>
+    </td>
+    <td align="center">
+    <img src="./preview/setting.png" width="375" />
+    <div>Setting</div>
+    </td>
+  </tr>
+</table>
+
+
 ## Project setup
 ```bash
 npm install
