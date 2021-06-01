@@ -105,9 +105,9 @@ export default defineComponent({
   position: absolute;
   top: 3px;
   left: 37px;
-  width: 4px;
+  width: 6px;
   height: 22px;
-  border-radius: 40%;
+  border-radius: 20%;
   background: #fff;
 }
 .lds-spinner div:nth-child(1) {

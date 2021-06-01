@@ -122,6 +122,7 @@ export default defineComponent({
         hr: {
           content: "<hr>",
           onClick(editor: any, buttonEl: any) {
+            console.log(editor, buttonEl);
             document.execCommand("insertHorizontalRule", false);
           },
         },

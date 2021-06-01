@@ -21,7 +21,6 @@
       <mark-down-preview
         :text="`\`\`\`html
 <a href='/login'>跳转</a>
-      \`\`\`
       `"
       ></mark-down-preview>
     </f7-block>

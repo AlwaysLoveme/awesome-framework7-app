@@ -161,8 +161,9 @@ const capacitorApp = {
   },
   handlerStatusbar() {
     if (!window.Capacitor.isNative) return;
-    StatusBar.setStyle({ style: StatusBarStyle.Light });
+    StatusBar.setStyle({ style: StatusBarStyle.Dark });
     StatusBar.setBackgroundColor({ color: "#FFFFFF" });
+    StatusBar.setOverlaysWebView({ overlay: true });
   },
   init(f7: Framework7) {
     // Save f7 instance

@@ -3,12 +3,15 @@
     <f7-view
       main
       url="/"
-      stackPages
+      :stackPages="true"
       class="safe-areas"
+      v-show="!qrscannerShow"
       :iosPageLoadDelay="100"
       browserHistorySeparator="#"
       :browser-history="browserHistory"
     ></f7-view>
+
+    <qr-scanner v-model:opened="qrscannerShow"></qr-scanner>
   </f7-app>
 </template>
 
@@ -16,12 +19,17 @@
 import routes from "@/f7routes";
 import { getDevice } from "@/f7config/app";
 import { f7, f7ready } from "framework7-vue";
+import Emitter from "tiny-emitter/instance";
 import capacitorApp from "@/f7config/capacitor";
-import { defineComponent, onMounted } from "vue";
+import { defineComponent, onMounted, defineAsyncComponent, ref } from "vue";
 
 export default defineComponent({
   name: "App",
-  components: {},
+  components: {
+    QrScanner: defineAsyncComponent(
+      () => import("@/components/shared/QrScanner.vue")
+    ),
+  },
   setup() {
     const device = getDevice();
     const browserHistory = process.env.NODE_ENV === "development";
@@ -67,12 +75,17 @@ export default defineComponent({
       }
     };
 
+    const qrscannerShow = ref(false);
+    const emitterQrscanner = (val: boolean) => (qrscannerShow.value = val);
+
     onMounted(() => {
       f7ready(f7Ready);
+      Emitter.on("showScanner", emitterQrscanner);
     });
 
     return {
       f7params,
+      qrscannerShow,
       browserHistory,
     };
   },

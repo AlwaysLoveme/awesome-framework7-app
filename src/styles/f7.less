@@ -1,3 +1,9 @@
+.device-android {
+    --f7-android-statusbar-height: 20px;
+    .page-content {
+        padding-top: calc(var(--f7-page-navbar-offset, 0px) + var(--f7-page-toolbar-top-offset, 0px) + var(--f7-page-subnavbar-offset, 0px) + var(--f7-page-searchbar-offset, 0px) + var(--f7-page-content-extra-padding-top, 0px) + var(--f7-android-statusbar-height, 0px))
+    }
+}
 .icon-back:after, .icon-prev:after, .icon-forward:after, .icon-next:after {
     font-size: inherit;
 }
@@ -36,4 +42,9 @@
 }
 .ios .popover-angle:after {
     border-radius: 2px;
+}
+
+// picker
+.picker.sheet-modal, .sheet-modal .toolbar {
+    border-radius: 15px 15px 0 0;
 }

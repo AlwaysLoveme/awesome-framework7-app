@@ -1,8 +1,8 @@
-import { Routes } from "./router.typings";
+import { Routes } from "@/typings/router";
 
 const tabs: Routes[] = [
   {
-    path: "home/",
+    path: "/",
     id: "home",
     meta: {
       text: "组件",
@@ -11,7 +11,7 @@ const tabs: Routes[] = [
     asyncComponent: () => import("@/pages/tabs/home.vue"),
   },
   {
-    path: "shared/",
+    path: "/shared",
     id: "shared",
     meta: {
       text: "工具",
@@ -20,7 +20,7 @@ const tabs: Routes[] = [
     asyncComponent: () => import("@/pages/tabs/shared.vue"),
   },
   {
-    path: "native/",
+    path: "/native",
     id: "native",
     meta: {
       text: "原生能力",
@@ -29,7 +29,7 @@ const tabs: Routes[] = [
     asyncComponent: () => import("@/pages/tabs/native.vue"),
   },
   {
-    path: "setting/",
+    path: "/setting",
     id: "setting",
     meta: {
       text: "设置",

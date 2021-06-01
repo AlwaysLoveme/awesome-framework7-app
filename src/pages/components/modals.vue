@@ -173,10 +173,9 @@
 </template>
 
 <script lang="ts">
-import { toast } from "@/utils/f7api";
-import { defineComponent } from "vue";
 import { f7 } from "framework7-vue";
-import { showLoading, hideLoading } from "@/utils/f7api";
+import { defineComponent } from "vue";
+import { showLoading, hideLoading, toast } from "@/shared/f7api";
 
 export default defineComponent({
   props: {

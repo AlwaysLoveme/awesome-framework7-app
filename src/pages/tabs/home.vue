@@ -1,5 +1,5 @@
 <template>
-  <base-page title="Components" :backLink="false">
+  <base-page title="组件" :backLink="false">
     <template v-for="(item, index) of groups" :key="index">
       <f7-block-title>{{ item.group_title }}</f7-block-title>
       <f7-list class="no-margin no-hairlines margin-bottom">

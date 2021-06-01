@@ -9,7 +9,7 @@
     @page:beforeremove="$emit('page:beforeremove')"
     @page:beforeunmount="$emit('page:beforeunmount')"
   >
-    <f7-navbar :title="title" :back-link="backLink">
+    <f7-navbar :title="title" :back-link="backLink" no-hairline>
       <f7-nav-right>
         <slot name="nav-right"></slot>
       </f7-nav-right>
@@ -25,6 +25,9 @@
     >
       <slot></slot>
     </f7-page-content>
+
+    <slot name="outcontent" v-if="$slots.outcontent"></slot>
+
     <!-- toolbar -->
     <f7-toolbar
       bottom
@@ -81,13 +84,14 @@ export default defineComponent({
     },
   },
   emits: [
-    "infinite",
     "refresh",
+    "infinite",
     "page:init",
-    "page:beforein",
-    "page:mounted",
     "page:reinit",
+    "page:mounted",
+    "page:beforein",
     "page:beforeout",
+    "page:beforeremove",
     "page:beforeunmount",
   ],
   setup(props, { emit }) {
@@ -110,4 +114,24 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style lang="less">
+.navbar {
+  height: calc(
+    var(--f7-navbar-height) + var(--f7-safe-area-top) +
+      var(--f7-android-statusbar-height, 0px)
+  ) !important;
+  a {
+    color: var(
+      --f7-navbar-link-color,
+      var(--f7-bars-link-color, var(--f7-theme-color))
+    ) !important;
+  }
+}
+.navbar-inner {
+  padding: calc(
+      var(--f7-safe-area-top) + var(--f7-android-statusbar-height, 0px)
+    )
+    calc(var(--f7-navbar-inner-padding-right) + var(--f7-safe-area-right)) 0
+    calc(var(--f7-navbar-inner-padding-left) + var(--f7-safe-area-left)) !important;
+}
+</style>

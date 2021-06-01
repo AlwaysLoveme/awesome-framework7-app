@@ -121,7 +121,7 @@
 </template>
 
 <script>
-import { actionCreate, dialogModal } from "@/utils/f7api";
+import { actionCreate, dialogModal } from "@/shared/f7api";
 import { defineComponent, ref } from "vue";
 import { f7 } from "framework7-vue";
 

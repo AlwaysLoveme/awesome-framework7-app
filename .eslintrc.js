@@ -20,5 +20,7 @@ module.exports = {
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "vue/no-deprecated-slot-attribute": "off",
+    "eslint-disable-next-line": "off",
+    "no-irregular-whitespace": "off"
   },
 };

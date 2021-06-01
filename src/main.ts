@@ -15,6 +15,7 @@ import "framework7-icons";
 import "./styles/app.less";
 import "./styles/var.less";
 import "./styles/f7.less";
+import "./styles/base.less";
 
 // Init Framework7-Vue Plugin
 Framework7.use(Framework7Vue);

@@ -1,4 +1,4 @@
-import { RouterGroups, Routes } from "./router.typings";
+import { RouterGroups, Routes } from "@/typings/router";
 
 const routerPages: RouterGroups = {
   group_title: "路由",
@@ -99,6 +99,32 @@ const modalPages: RouterGroups = {
         },
       },
       asyncComponent: () => import("@/pages/components/sheet-modal.vue"),
+    },
+    {
+      path: "/picker",
+      meta: {
+        title: "Picker",
+        desc: "单列、多列选择器",
+      },
+      options: {
+        props: {
+          title: "Picker",
+        },
+      },
+      asyncComponent: () => import("@/pages/components/picker.vue"),
+    },
+    {
+      path: "/custom-dialog",
+      meta: {
+        title: "CustomDialog",
+        desc: "自定义模态框",
+      },
+      options: {
+        props: {
+          title: "CustomDialog",
+        },
+      },
+      asyncComponent: () => import("@/pages/components/custom-modal.vue"),
     },
   ],
 };
