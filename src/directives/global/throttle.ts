@@ -3,10 +3,14 @@ import { throttle } from "lodash/function";
 
 const throttleDirective: ObjectDirective = {
   mounted(el, binding) {
-    const bindClick = throttle(function () {
-      if (typeof binding.value !== "function") throw Error("指令值需是函数");
-      binding.value();
-    }, 2000);
+    const bindClick = throttle(
+      function () {
+        if (typeof binding.value !== "function") throw Error("指令值需是函数");
+        binding.value();
+      },
+      2000,
+      { trailing: false }
+    );
     el.__function = bindClick;
     el.addEventListener("click", bindClick, false);
   },

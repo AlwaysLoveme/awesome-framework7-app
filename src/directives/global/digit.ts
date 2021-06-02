@@ -1,4 +1,4 @@
-import { ObjectDirective } from "vue";
+import { ObjectDirective, nextTick } from "vue";
 
 /**
  * @Description: 限制input输入数字格式，{ max: 输入最大值，digit: 保留的小数位}
@@ -18,8 +18,8 @@ const digitDirective: ObjectDirective = {
         const digit = num.split(".")[1];
         input.value = int + "." + digit.substring(0, value?.digit ?? 2);
       }
-      if (value?.max && Number(num) > Number(value?.max)) {
-        return (input.value = value.max);
+      if (value?.max && Number(num) >= Number(value?.max)) {
+        nextTick(() => (input.value = value.max));
       }
     };
     input.addEventListener("input", input.__function, false);

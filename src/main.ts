@@ -3,6 +3,7 @@ import App from "./App.vue";
 import store from "./store";
 import VConsole from "vconsole";
 import GlobalComponents from "@/components";
+import Directives from "@/directives";
 
 // Import Framework7
 import Framework7 from "./f7config/app";
@@ -28,5 +29,6 @@ const app = createApp(App);
 registerComponents(app);
 
 app.use(store);
+app.use(Directives);
 app.use(GlobalComponents);
 app.mount("#app");

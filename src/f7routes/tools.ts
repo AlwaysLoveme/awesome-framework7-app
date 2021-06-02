@@ -101,6 +101,19 @@ const otherPages: RouterGroups = {
       },
       asyncComponent: () => import("@/pages/tools/image-cropper.vue"),
     },
+    {
+      path: "/directives",
+      meta: {
+        title: "Directives",
+        desc: "内置自定义指令",
+      },
+      options: {
+        props: {
+          title: "Directives",
+        },
+      },
+      asyncComponent: () => import("@/pages/tools/directives.vue"),
+    },
   ],
 };
 const groups = [safeArea, typography, utilsPages, devicePages, otherPages];

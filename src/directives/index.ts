@@ -1,13 +1,13 @@
 import { App, Directive } from "vue";
 
-const ctx = require.context("./global/", false, /\.vue$/);
+const ctx = require.context("./global/", false, /\.ts$/);
 const componentList: Record<string, Directive> = {};
 for (const key of ctx.keys()) {
   const fileKey = key.replace(/\.\/|\.ts/g, "");
   componentList[fileKey] = ctx(key).default;
 }
 
-const install = (app: App) => {
+const install = (app: App): App => {
   // 注册自定义组件
   Object.keys(componentList).forEach((item) => {
     app.directive(item, componentList[item]);
