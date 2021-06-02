@@ -6,6 +6,7 @@ This sample APP integrates most of the official components, It also integrates s
 It will continue to be updated later
 
 ## Preview
+
 <table border frame=void collapse="collapse">
   <tr>
     <td align="center">
@@ -25,6 +26,17 @@ It will continue to be updated later
     <td align="center">
     <img src="./preview/setting.png" width="375" />
     <div>Setting</div>
+    </td>
+  </tr>
+</table>
+
+
+>扫码此二维码下载IOS APP体验
+<table border frame=void collapse="collapse">
+  <tr>
+    <td align="center">
+    <img src="./preview/app_ios.png" width="750" />
+    <div>IOS APP</div>
     </td>
   </tr>
 </table>

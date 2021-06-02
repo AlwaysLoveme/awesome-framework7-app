@@ -39,10 +39,11 @@ const config: CapacitorConfig = {
       androidScaleType: "CENTER_CROP",
     },
   },
-  loggingBehavior: "debug",
+  loggingBehavior:
+    process.env.NODE_ENV === "development" ? "debug" : "production",
   // server: {
   //   cleartext: true,
-  //   url: `http://192.168.1.99:8080`,
+  //   url: `https://www.codingman.icu`,
   // },
 };
 
