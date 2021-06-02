@@ -31,11 +31,11 @@ It will continue to be updated later
 </table>
 
 
->扫码此二维码下载IOS APP体验
+>扫码此二维码下载APP体验
 <table border frame=void collapse="collapse">
   <tr>
     <td align="center">
-    <img src="./preview/app_ios.png" width="750" />
+    <img src="./preview/app_ios.png" width="320" />
     <div>IOS APP</div>
     </td>
   </tr>
