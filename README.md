@@ -31,7 +31,7 @@ It will continue to be updated later
 </table>
 
 ##
->扫码此二维码下载APP体验
+>Download APP
 <table border frame=void collapse="collapse">
   <tr>
     <td align="center">
